@@ -1,5 +1,7 @@
 package CollectionListSetInterface;
 
+import java.util.TreeSet;
+
 public class WordList {
 	public static void main(String[] args) {
 		String text;
@@ -19,6 +21,14 @@ public class WordList {
 			System.out.println(w);
 		}
 		System.out.println("Total number of words: " + text.length());
-	
+		TreeSet<String> wordList = new TreeSet<String>();
+		for (String w : words) {
+			wordList.add(w);
+		}
+		System.out.println("Total number of unique words: " + wordList.size());
+		
+		for (String w : wordList) {
+			System.out.println(w);
+		}
 	}
 }
